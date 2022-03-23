@@ -7,6 +7,8 @@ import { MenuPrincipalComponent } from './components/menu-principal/menu-princip
 import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { FormularioUsuarioComponent } from './components/formulario-usuario/formulario-usuario.component';
+import { FormsModule } from '@angular/forms';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { FormularioUsuarioComponent } from './components/formulario-usuario/form
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
